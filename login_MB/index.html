@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mighty Blade - Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="top-header">
+        <div class="logo">MIGHTY BLADE</div>
+        <div class="header-icons">
+            <button class="icon-btn"><i class="fa-solid fa-question"></i></button>
+            <button class="icon-btn"><i class="fa-solid fa-info"></i></button>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <div class="login-box">
+            <div class="box-header">
+                <h1>Mighty Blade</h1>
+                <h2>ARCHIVE OF THE RELIC</h2>
+            </div>
+
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="hero-name">LOGIN</label>
+                    <input type="text" id="hero-name" placeholder="Nome do Herói" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">SENHA</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                </div>
+
+                <div class="role-section">
+                    <div class="divider">
+                        <span>— SELECIONE SEU DESTINO —</span>
+                    </div>
+                    
+                    <div class="role-selector">
+                        <div class="role-card active" id="role-jogador">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <span>JOGADOR</span>
+                        </div>
+                        <div class="role-card" id="role-mestre">
+                            <i class="fa-solid fa-book-open"></i>
+                            <span>MESTRE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-prosseguir">PROSSEGUIR</button>
+                
+                <div class="recover-access">
+                    <a href="#">RECUPERAR ACESSO</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="bottom-footer">
+        <div class="copyright">
+            &copy; ARCHIVE OF THE RELIC. ALL RIGHTS RESERVED.
+        </div>
+        <div class="footer-links">
+            <a href="#">LEGAL</a>
+            <a href="#">PRIVACY</a>
+            <a href="#">TERMS</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

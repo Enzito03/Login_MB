@@ -1,0 +1,251 @@
+/* Reset básico para garantir que fique igual em todos os navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-dark: #121212;
+    --box-bg: #1c1c1c;
+    --gold: #b39b70; /* Cor dourada puxada pro fosco da imagem */
+    --text-light: #e0e0e0;
+    --text-muted: #666666;
+    --border-color: #333333;
+    
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: var(--font-sans);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* === HEADER === */
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.logo {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.header-icons .icon-btn {
+    background-color: #2a2a2a;
+    color: #888;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.header-icons .icon-btn:hover {
+    color: var(--text-light);
+    background-color: #444;
+}
+
+/* === MAIN CONTENT (Centro da Tela) === */
+.main-container {
+    flex: 1; /* Faz o main crescer e empurrar o footer pra baixo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Caixa de Login */
+.login-box {
+    background-color: var(--box-bg);
+    width: 100%;
+    max-width: 420px;
+    padding: 50px 40px;
+    border: 1px solid var(--border-color);
+    /* Um leve truque de CSS para criar os cantos aparentes da imagem */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.box-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.box-header h1 {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.box-header h2 {
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    color: var(--text-muted);
+}
+
+/* Formulário */
+.input-group {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 0.65rem;
+    color: var(--gold);
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-light);
+    padding: 8px 0;
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-bottom-color: var(--gold);
+}
+
+.input-group input::placeholder {
+    color: #444;
+}
+
+/* Seleção de Destino (Jogador / Mestre) */
+.role-section {
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.divider {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.divider span {
+    font-size: 0.6rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+}
+
+.role-selector {
+    display: flex;
+    gap: 15px;
+}
+
+.role-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: 0.3s;
+    color: var(--text-muted);
+}
+
+.role-card i {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.role-card span {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+}
+
+/* Classe dinâmica que será aplicada pelo JavaScript */
+.role-card.active {
+    border-color: var(--gold);
+    color: var(--text-light);
+}
+
+/* Botão Prosseguir */
+.btn-prosseguir {
+    width: 100%;
+    padding: 15px;
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 25px;
+}
+
+.btn-prosseguir:hover {
+    background-color: rgba(179, 155, 112, 0.1);
+}
+
+/* Recuperar Acesso */
+.recover-access {
+    text-align: center;
+}
+
+.recover-access a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.recover-access a:hover {
+    color: var(--text-light);
+}
+
+/* === FOOTER === */
+.bottom-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    font-size: 0.65rem;
+    color: #555;
+    background-color: #0d0d0d;
+}
+
+.footer-links a {
+    color: #555;
+    text-decoration: none;
+    margin-left: 20px;
+    letter-spacing: 1px;
+}
+
+.footer-links a:hover {
+    color: var(--text-light);
+}
+
+/* Responsividade básica para telas menores */
+@media (max-width: 600px) {
+    .top-header, .bottom-footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
